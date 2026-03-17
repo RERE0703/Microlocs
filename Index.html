@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loc & Glow | Microlocs, Sisterlocks & Beauty Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f7;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #8b5a2b 0%, #d4a574 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-hidden {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">Loc & Glow</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-stone-600 hover:text-amber-700 transition-colors font-medium">Home</a>
+                    <a href="#services" class="text-stone-600 hover:text-amber-700 transition-colors font-medium">Services</a>
+                    <a href="#shop" class="text-stone-600 hover:text-amber-700 transition-colors font-medium">Shop</a>
+                    <a href="#courses" class="text-stone-600 hover:text-amber-700 transition-colors font-medium">Courses</a>
+                    <a href="#ai-assistant" class="text-stone-600 hover:text-amber-700 transition-colors font-medium">AI Assistant</a>
+                    <a href="#community" class="text-stone-600 hover:text-amber-700 transition-colors font-medium">Community</a>
+                    <a href="#students" class="text-stone-600 hover:text-amber-700 transition-colors font-medium">Student Directory</a>
+                    <a href="#reviews" class="text-stone-600 hover:text-amber-700 transition-colors font-medium">Reviews</a>
+                    <button class="bg-amber-700 text-white px-6 py-2 rounded-full hover:bg-amber-800 transition-colors font-medium">Book Now</button>
+                </div>
+
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6 text-stone-700"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-t border-stone-200" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 text-stone-600 hover:bg-stone-50 rounded-md">Home</a>
+                <a href="#services" class="block px-3 py-2 text-stone-600 hover:bg-stone-50 rounded-md">Services</a>
+                <a href="#shop" class="block px-3 py-2 text-stone-600 hover:bg-stone-50 rounded-md">Shop</a>
+                <a href="#courses" class="block px-3 py-2 text-stone-600 hover:bg-stone-50 rounded-md">Courses</a>
+                <a href="#ai-assistant" class="block px-3 py-2 text-stone-600 hover:bg-stone-50 rounded-md">AI Assistant</a>
+                <a href="#community" class="block px-3 py-2 text-stone-600 hover:bg-stone-50 rounded-md">Community</a>
+                <a href="#students" class="block px-3 py-2 text-stone-600 hover:bg-stone-50 rounded-md">Student Directory</a>
+                <a href="#reviews" class="block px-3 py-2 text-stone-600 hover:bg-stone-50 rounded-md">Reviews</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-stone-50 via-amber-50/30 to-stone-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-4 py-2 bg-amber-100 rounded-full text-amber-800 text-sm font-semibold tracking-wide uppercase">
+                        Welcome to Your Hair Journey
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold text-stone-900 leading-tight">
+                        Master Your <span class="gradient-text">Microlocs</span> & Glow From Within
+                    </h1>
+                    <p class="text-xl text-stone-600 leading-relaxed max-w-lg">
+                        Join a thriving community of loc enthusiasts, beauty experts, and students. Premium services, curated products, and expert education all in one inspiring space.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-amber-700 text-white px-8 py-4 rounded-full hover:bg-amber-800 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg shadow-amber-700/20">
+                            Book Appointment
+                        </button>
+                        <button onclick="scrollToSection('courses')" class="bg-white text-amber-700 border-2 border-amber-700 px-8 py-4 rounded-full hover:bg-amber-50 transition-all font-semibold text-lg">
+                            Explore Courses
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-6 pt-4">
+                        <div class="flex -space-x-3">
+                            <img src="http://static.photos/people/100x100/1" class="w-12 h-12 rounded-full border-2 border-white object-cover" alt="Client">
+                            <img src="http://static.photos/people/100x100/2" class="w-12 h-12 rounded-full border-2 border-white object-cover" alt="Client">
+                            <img src="http://static.photos/people/100x100/3" class="w-12 h-12 rounded-full border-2 border-white object-cover" alt="Client">
+                        </div>
+                        <div>
+                            <p class="font-semibold text-stone-900">500+ Happy Clients</p>
+                            <div class="flex text-amber-500">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-amber-200 to-stone-200 rounded-3xl transform rotate-3 opacity-50"></div>
+                    <img src="http://static.photos/beauty/800x600/42" alt="Microlocs Beauty" class="relative rounded-3xl shadow-2xl w-full object-cover h-[600px]">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="award" class="w-6 h-6 text-amber-700"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-stone-900">Certified Expert</p>
+                                <p class="text-sm text-stone-500">10+ Years Experience</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-stone-600">Specialized in microlocs, sisterlocks, and holistic skincare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-stone-900 mb-4">Our Services</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto text-lg">Premium hair and beauty services tailored to enhance your natural beauty</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group hover-lift bg-stone-50 rounded-2xl p-8 border border-stone-100">
+                    <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-200 transition-colors">
+                        <i data-lucide="scissors" class="w-8 h-8 text-amber-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-900 mb-3">Microlocs & Sisterlocks</h3>
+                    <p class="text-stone-600 mb-4">Professional installation, maintenance, and styling for all hair types. Start your loc journey with confidence.</p>
+                    <p class="text-amber-700 font-semibold">From $200</p>
+                </div>
+
+                <div class="group hover-lift bg-stone-50 rounded-2xl p-8 border border-stone-100">
+                    <div class="w-16 h-16 bg-rose-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rose-200 transition-colors">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-rose-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-900 mb-3">Esthetician Services</h3>
+                    <p class="text-stone-600 mb-4">Facials, skin treatments, waxing, and personalized skincare consultations for glowing skin.</p>
+                    <p class="text-rose-700 font-semibold">From $85</p>
+                </div>
+
+                <div class="group hover-lift bg-stone-50 rounded-2xl p-8 border border-stone-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-200 transition-colors">
+                        <i data-lucide="heart" class="w-8 h-8 text-purple-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-900 mb-3">Loc Maintenance</h3>
+                    <p class="text-stone-600 mb-4">Retwisting, interlocking, deep conditioning, and scalp treatments to keep your locs healthy.</p>
+                    <p class="text-purple-700 font-semibold">From $75</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-20 px-4 sm:px-6 lg:px-8 bg-stone-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-stone-900 mb-2">Curated Products</h2>
+                    <p class="text-stone-600">Professional-grade products for home care</p>
+                </div>
+                <button class="hidden md:flex items-center gap-2 text-amber-700 font-semibold hover:text-amber-800 transition-colors">
+                    View All Products <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/cosmetic/400x400/1" alt="Loc Gel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-amber-700 hover:text-white transition-colors" onclick="addToCart('Nourishing Loc Gel')">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-stone-900 mb-1">Nourishing Loc Gel</h3>
+                        <p class="text-sm text-stone-500 mb-3">Lightweight hold with natural ingredients</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-amber-700">$24.00</span>
+                            <div class="flex text-amber-500 text-sm">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span class="ml-1">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/cosmetic/400x400/2" alt="Scalp Oil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-amber-700 hover:text-white transition-colors" onclick="addToCart('Growth Scalp Oil')">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-stone-900 mb-1">Growth Scalp Oil</h3>
+                        <p class="text-sm text-stone-500 mb-3">Promotes healthy hair growth</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-amber-700">$32.00</span>
+                            <div class="flex text-amber-500 text-sm">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span class="ml-1">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/cosmetic/400x400/3" alt="Face Serum" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-amber-700 hover:text-white transition-colors" onclick="addToCart('Vitamin C Serum')">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-stone-900 mb-1">Vitamin C Serum</h3>
+                        <p class="text-sm text-stone-500 mb-3">Brightening and anti-aging</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-amber-700">$45.00</span>
+                            <div class="flex text-amber-500 text-sm">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span class="ml-1">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/cosmetic/400x400/4" alt="Loc Shampoo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-amber-700 hover:text-white transition-colors" onclick="addToCart('Clarifying Shampoo')">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-stone-900 mb-1">Clarifying Shampoo</h3>
+                        <p class="text-sm text-stone-500 mb-3">Deep clean without residue</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-amber-700">$18.00</span>
+                            <div class="flex text-amber-500 text-sm">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <span class="ml-1">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="md:hidden w-full mt-8 py-3 border-2 border-amber-700 text-amber-700 rounded-full font-semibold hover:bg-amber-50 transition-colors">
+                View All Products
+            </button>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-amber-700 font-semibold tracking-wider uppercase text-sm">Learn From The Best</span>
+                <h2 class="text-4xl font-bold text-stone-900 mt-2 mb-4">Microlocs Mastery Courses</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto text-lg">Start your journey to becoming a certified microlocs technician</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-amber-50 to-stone-100 rounded-3xl p-8 border border-amber-100 hover-lift relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-amber-700 text-white px-6 py-2 rounded-bl-2xl font-semibold">
+                        Coming Soon
+                    </div>
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md">
+                            <i data-lucide="graduation-cap" class="w-8 h-8 text-amber-700"></i>
+                        </div>
+                        <span class="text-3xl font-bold text-amber-700">$497</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-900 mb-3">Beginner to Pro: Microlocs Certification</h3>
+                    <p class="text-stone-600 mb-6">Comprehensive 8-week online course covering installation techniques, consultation, maintenance, and business setup.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-stone-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600"></i>
+                            <span>40+ Video Tutorials</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-stone-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600"></i>
+                            <span>Live Q&A Sessions</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-stone-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600"></i>
+                            <span>Certificate of Completion</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-stone-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600"></i>
+                            <span>Student Directory Access</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-amber-700 text-white py-4 rounded-xl font-semibold hover:bg-amber-800 transition-colors" onclick="joinWaitlist('Beginner to Pro')">
+                        Join Waitlist
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-stone-100 to-amber-50 rounded-3xl p-8 border border-stone-200 hover-lift relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-stone-700 text-white px-6 py-2 rounded-bl-2xl font-semibold">
+                        Coming Soon
+                    </div>
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-stone-700"></i>
+                        </div>
+                        <span class="text-3xl font-bold text-stone-700">$297</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-900 mb-3">Advanced Styling & Business</h3>
+                    <p class="text-stone-600 mb-6">Take your skills to the next level with advanced techniques, styling mastery, and business scaling strategies.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-stone-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-stone-600"></i>
+                            <span>Advanced Interlocking Methods</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-stone-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-stone-600"></i>
+                            <span>Creative Styling Workshops</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-stone-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-stone-600"></i>
+                            <span>Business Marketing Module</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-stone-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-stone-600"></i>
+                            <span>Client Retention Strategies</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-stone-700 text-white py-4 rounded-xl font-semibold hover:bg-stone-800 transition-colors" onclick="joinWaitlist('Advanced Styling')">
+                        Join Waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Section -->
+    <section id="ai-assistant" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-900 to-stone-900 text-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-amber-200 text-sm font-semibold mb-4">
+                    <i data-lucide="bot" class="w-4 h-4"></i>
+                    AI Powered
+                </div>
+                <h2 class="text-4xl font-bold mb-4">Ask Our Hair & Skin AI Assistant</h2>
+                <p class="text-stone-300 text-lg max-w-2xl mx-auto">Get instant answers to your microlocs, sisterlocks, and skincare questions. Your question helps others in the community too!</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl p-2 border border-white/20">
+                <div class="bg-white rounded-2xl p-6 md:p-8 text-stone-800 min-h-[400px] flex flex-col">
+                    <!-- Chat Area -->
+                    <div id="chat-area" class="flex-1 space-y-4 mb-6 max-h-[400px] overflow-y-auto scroll-hidden">
+                        <!-- AI Welcome Message -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="bot" class="w-5 h-5 text-amber-700"></i>
+                            </div>
+                            <div class="bg-stone-100 rounded-2xl rounded-tl-none p-4 max-w-[80%]">
+                                <p class="text-stone-800">Hi beautiful! 👋 I'm your AI assistant for all things microlocs and skincare. Ask me about:</p>
+                                <ul class="mt-2 text-sm text-stone-600 list-disc list-inside">
+                                    <li>Microlocs installation & maintenance</li>
+                                    <li>Sisterlocks vs traditional locs</li>
+                                    <li>Product recommendations</li>
+                                    <li>Skincare routines</li>
+                                    <li>Common issues and solutions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div class="border-t border-stone-200 pt-4">
+                        <form id="ai-form" class="flex gap-3" onsubmit="handleAIQuestion(event)">
+                            <input 
+                                type="text" 
+                                id="ai-input" 
+                                placeholder="Ask about microlocs, sisterlocks, or skincare..." 
+                                class="flex-1 px-6 py-4 rounded-xl border border-stone-300 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                                required
+                            >
+                            <button type="submit" class="bg-amber-700 text-white px-6 py-4 rounded-xl hover:bg-amber-800 transition-colors flex items-center gap-2 font-semibold">
+                                <span>Ask</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Previous Questions -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4 text-amber-200">Recent Community Questions</h3>
+                <div id="qa-history" class="grid md:grid-cols-2 gap-4">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Directory Section -->
+    <section id="students" class="py-20 px-4 sm:px-6 lg:px-8 bg-stone-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
+                <div>
+                    <h2 class="text-4xl font-bold text-stone-900 mb-2">Student Directory</h2>
+                    <p class="text-stone-600">Connect with certified students looking for clients in your area</p>
+                </div>
+                <button onclick="openStudentModal()" class="bg-amber-700 text-white px-6 py-3 rounded-full hover:bg-amber-800 transition-colors font-semibold flex items-center gap-2">
+                    <i data-lucide="plus" class="w-5 h-5"></i>
+                    List Your Services
+                </button>
+            </div>
+
+            <div id="student-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sample Student Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/work/600x400/1" alt="Student Work" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="http://static.photos/people/100x100/10" alt="Student" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h3 class="font-bold text-stone-900">Jasmine Williams</h3>
+                                <p class="text-sm text-stone-500">Atlanta, GA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4 text-sm text-stone-600">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            <span>(404) 555-0123</span>
+                        </div>
+                        <p class="text-stone-600 text-sm mb-4">Specializing in microlocs installation and styling. 6 months experience, seeking new clients for portfolio building.</p>
+                        <div class="flex gap-2">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-semibold">Microlocs</span>
+                            <span class="px-3 py-1 bg-stone-100 text-stone-700 rounded-full text-xs font-semibold">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Modal -->
+        <div id="student-modal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-stone-900">Join Student Directory</h3>
+                    <button onclick="closeStudentModal()" class="p-2 hover:bg-stone-100 rounded-full">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <form onsubmit="submitStudent(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Full Name</label>
+                        <input type="text" id="student-name" required class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Location (City, State)</label>
+                        <input type="text" id="student-location" required class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Phone Number</label>
+                        <input type="tel" id="student-phone" required class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Specialties</label>
+                        <input type="text" id="student-specialty" placeholder="e.g., Microlocs, Sisterlocks, Styling" required class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Bio / Experience</label>
+                        <textarea id="student-bio" rows="3" required class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Work Photo URL (optional)</label>
+                        <input type="url" id="student-photo" placeholder="http://..." class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <button type="submit" class="w-full bg-amber-700 text-white py-4 rounded-xl font-semibold hover:bg-amber-800 transition-colors">
+                        Submit Listing
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews & Gallery Section -->
+    <section id="reviews" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-stone-900 mb-4">Community Gallery & Reviews</h2>
+                <p class="text-stone-600">Share your journey and see transformations from our community</p>
+            </div>
+
+            <div class="flex justify-center mb-8">
+                <button onclick="openReviewModal()" class="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-4 rounded-full hover:shadow-lg transition-all font-semibold flex items-center gap-2">
+                    <i data-lucide="camera" class="w-5 h-5"></i>
+                    Share Your Transformation
+                </button>
+            </div>
+
+            <div id="reviews-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sample Review -->
+                <div class="bg-stone-50 rounded-2xl overflow-hidden">
+                    <img src="http://static.photos/beauty/600x600/22" alt="Client Photo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3 text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-stone-700 mb-4">"My microlocs journey has been amazing! The products and care tips from this studio changed my hair completely."</p>
+                        <div class="flex items-center gap-3">
+                            <img src="http://static.photos/people/100x100/15" class="w-10 h-10 rounded-full object-cover" alt="Reviewer">
+                            <div>
+                                <p class="font-semibold text-stone-900">Keisha M.</p>
+                                <p class="text-sm text-stone-500">2 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Modal -->
+        <div id="review-modal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-stone-900">Share Your Experience</h3>
+                    <button onclick="closeReviewModal()" class="p-2 hover:bg-stone-100 rounded-full">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <form onsubmit="submitReview(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Your Name</label>
+                        <input type="text" id="reviewer-name" required class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Rating</label>
+                        <select id="review-rating" class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none">
+                            <option value="5">5 Stars - Excellent</option>
+                            <option value="4">4 Stars - Very Good</option>
+                            <option value="3">3 Stars - Good</option>
+                            <option value="2">2 Stars - Fair</option>
+                            <option value="1">1 Star - Poor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Your Review</label>
+                        <textarea id="review-text" rows="3" required class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-700 mb-2">Photo URL (optional)</label>
+                        <input type="url" id="review-photo" placeholder="http://..." class="w-full px-4 py-3 rounded-lg border border-stone-300 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <button type="submit" class="w-full bg-amber-700 text-white py-4 rounded-xl font-semibold hover:bg-amber-800 transition-colors">
+                        Post Review
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="community" class="py-20 px-4 sm:px-6 lg:px-8 bg-stone-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-stone-900 mb-2">From The Blog</h2>
+                    <p class="text-stone-600">Tips, tutorials, and inspiration for your journey</p>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-2 text-amber-700 font-semibold hover:text-amber-800 transition-colors">
+                    View All Posts <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer">
+                    <div class="h-56 overflow-hidden">
+                        <img src="http://static.photos/hair/600x400/1" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-stone-500 mb-3">
+                            <span>Jan 15, 2024</span>
+                            <span class="w-1 h-1 bg-stone-400 rounded-full"></span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">The Complete Guide to Starting Your Microlocs Journey</h3>
+                        <p class="text-stone-600 text-sm line-clamp-2">Everything you need to know before getting microlocs, from preparation to aftercare...</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer">
+                    <div class="h-56 overflow-hidden">
+                        <img src="http://static.photos/wellness/600x400/2" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-stone-500 mb-3">
+                            <span>Jan 10, 2024</span>
+                            <span class="w-1 h-1 bg-stone-400 rounded-full"></span>
+                            <span>3 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">5 Essential Oils for Healthy Locs and Scalp</h3>
+                        <p class="text-stone-600 text-sm line-clamp-2">Natural remedies to keep your locs moisturized and your scalp healthy throughout every season...</p>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer">
+                    <div class="h-56 overflow-hidden">
+                        <img src="http://static.photos/beauty/600x400/3" alt="Blog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-stone-500 mb-3">
+                            <span>Jan 5, 2024</span>
+                            <span class="w-1 h-1 bg-stone-400 rounded-full"></span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-3 group-hover:text-amber-700 transition-colors">Sisterlocks vs Microlocs: Which Is Right For You?</h3>
+                        <p class="text-stone-600 text-sm line-clamp-2">A detailed comparison to help you make the best decision for your hair type and lifestyle...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-300 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-white gradient-text">Loc & Glow</h3>
+                    <p class="text-stone-400">Empowering your natural beauty journey through expert care, education, and community.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-amber-500 transition-colors">Services</a></li>
+                        <li><a href="#shop" class="hover:text-amber-500 transition-colors">Shop</a></li>
+                        <li><a href="#courses" class="hover:text-amber-500 transition-colors">Courses</a></li>
+                        <li><a href="#ai-assistant" class="hover:text-amber-500 transition-colors">AI Assistant</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#students" class="hover:text-amber-500 transition-colors">Student Directory</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a></li>
+                        <li><a href="#community" class="hover:text-amber-500 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-amber-600"></i>
+                            <span>123 Beauty Lane, Atlanta, GA</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-amber-600"></i>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-amber-600"></i>
+                            <span>hello@locandglow.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-stone-500">&copy; 2024 Loc & Glow. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-stone-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-stone-900 text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-24 transition-transform duration-300 z-50 flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+        <span id="toast-message">Success!</span>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
